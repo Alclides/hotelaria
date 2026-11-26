@@ -1,0 +1,11 @@
+@Hotelaria.Api_HostAddress = http://localhost:5005
+
+GET {{Hotelaria.Api_HostAddress}}/openapi/v1.json
+Accept: application/json
+
+###
+
+GET {{Hotelaria.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
