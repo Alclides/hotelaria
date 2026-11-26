@@ -14,8 +14,6 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddProblemDetails();
 builder.Services.AddExceptionHandler<TratadorDeErros>();
-
-// ---------- Núcleo: casos de uso (portas de entrada → services) ----------
 builder.Services.AddScoped<IHospedeService, HospedeService>();
 // builder.Services.AddScoped<IQuartoService, QuartoService>();
 // builder.Services.AddScoped<IReservaService, ReservaService>();
