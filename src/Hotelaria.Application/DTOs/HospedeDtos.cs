@@ -8,7 +8,8 @@ namespace Hotelaria.Application.DTOs
 {
     public record CriarHospedeRequest(string Nome, string Cpf, string Email, string Telefone);
 
-    public record AtualizarHospedeRequest(string Nome, string Email, string Telefone);
+    // PATCH: todos os campos são opcionais; o que não vier mantém o valor atual
+    public record AtualizarHospedeRequest(string? Nome, string? Email, string? Telefone);
 
     public record HospedeResponse(Guid Id, string Nome, string Cpf, string Email, string Telefone)
     {

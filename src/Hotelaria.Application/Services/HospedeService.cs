@@ -40,7 +40,12 @@ namespace Hotelaria.Application.Services
         public async Task<HospedeResponse> AtualizarAsync(Guid id, AtualizarHospedeRequest request, CancellationToken ct = default)
         {
             var hospede = await ObterOuFalharAsync(id, ct);
-            hospede.Atualizar(request.Nome, request.Email, request.Telefone);
+
+            // Campo que não veio (null) mantém o valor atual
+            hospede.Atualizar(
+                request.Nome ?? hospede.Nome,
+                request.Email ?? hospede.Email,
+                request.Telefone ?? hospede.Telefone);
 
             await hospedes.AtualizarAsync(hospede, ct);
             return HospedeResponse.De(hospede);
