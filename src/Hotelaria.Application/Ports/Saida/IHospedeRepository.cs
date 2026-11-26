@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Hotelaria.Application.Ports.Saida
 {
-    public interface IHospedeRepository_cs
+    public interface IHospedeRepositorycs
     {
         Task<Hospede?> ObterPorIdAsync(Guid id, CancellationToken ct = default);
         Task<IReadOnlyList<Hospede>> ListarAsync(CancellationToken ct = default);
